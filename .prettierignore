@@ -1,0 +1,24 @@
+# 包管理器
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# 构建产物
+dist/
+.vite/
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.log
+
+# 环境变量
+.env.local
+.env.*.local
