@@ -51,7 +51,7 @@ import SideTree from '@/components/SideTree.vue'
 .layout-right {
   flex: 1;
   overflow-y: auto;
-  background: #1a1a2e;
+  background: #ccc;
   padding: 2rem;
 }
 </style>
