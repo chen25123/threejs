@@ -44,7 +44,7 @@ export function buildScene({ scene, camera, disposeTracker, addCallback }: Scene
   fanceBus().initFance(scene)
 
   // 添加游泳池
-  poolModel(scene).initPool()
+  poolModel(scene).initPool(addCallback)
 
   // ---- 相机位置 ----
   camera.position.set(0, 0.5, 6)

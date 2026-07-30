@@ -117,6 +117,60 @@ export function caoModel() {
     return caoArr
   }
 
+  function daolu1() {
+    const ax = Math.sqrt(1.2 ** 2 - 0.5 ** 2)
+    const wz = (ax - 0.5) / 2 + 0.5
+    const angleA = Math.PI + Math.PI / 4 // 225°
+    const angleB = Math.PI + Math.atan2(ax, 0.5) // ≈ 245.3°
+    const shape1 = new THREE.Shape()
+    shape1.moveTo(-wz, -wz)
+    shape1.absarc(0, 0, 1.2, angleA, angleB, false) // 外圆弧 A→B
+    shape1.lineTo(-0.5, -ax)
+    shape1.lineTo(-0.5, -8)
+    shape1.lineTo(-wz, -8)
+    shape1.lineTo(-wz, -wz)
+    const geometry = new THREE.ShapeGeometry(shape1)
+    const material = new THREE.MeshStandardMaterial({ map: ad })
+    const mesh = new THREE.Mesh(geometry, material)
+    mesh.rotation.x = -Math.PI / 2
+    mesh.position.y = 0.01
+    return mesh
+  }
+
+  function daolu2() {
+    const ax = Math.sqrt(1.2 ** 2 - 0.5 ** 2)
+    const wz = (ax - 0.5) / 2 + 0.5
+    const shape1 = new THREE.Shape()
+    shape1.moveTo(-wz, -wz)
+    shape1.lineTo(-ax, -0.5)
+    shape1.lineTo(-9, -0.5)
+    shape1.lineTo(-9, -wz)
+    shape1.lineTo(-wz, -wz)
+    const geometry = new THREE.ShapeGeometry(shape1)
+    const material = new THREE.MeshStandardMaterial({ map: ad })
+    const mesh = new THREE.Mesh(geometry, material)
+    mesh.rotation.x = -Math.PI / 2
+    mesh.position.y = 0.01
+    return mesh
+  }
+
+  function daolu3() {
+    const ax = Math.sqrt(1.2 ** 2 - 0.5 ** 2)
+    const wz = (ax - 0.5) / 2 + 0.5
+    const shape1 = new THREE.Shape()
+    shape1.moveTo(wz, -wz)
+    shape1.lineTo(0.5, -ax)
+    shape1.lineTo(0.5, -8)
+    shape1.lineTo(wz, -8)
+    shape1.lineTo(wz, -wz)
+    const geometry = new THREE.ShapeGeometry(shape1)
+    const material = new THREE.MeshStandardMaterial({ map: ad })
+    const mesh = new THREE.Mesh(geometry, material)
+    mesh.rotation.x = -Math.PI / 2
+    mesh.position.y = 0.01
+    return mesh
+  }
+
   function initCao(scene: THREE.Scene) {
     // 创建草
     const cao1 = createCaoByPoint(-4.75, 0.01, 9.5, 8.5, 1, { topRight: true, r: 8 })
@@ -133,6 +187,12 @@ export function caoModel() {
     scene.add(cao6)
     const cao7 = createCaoByPoint(0, 0.01, -9.5, 18, 1, { r: 0 })
     scene.add(cao7)
+    const cao8 = daolu1()
+    scene.add(cao8)
+    const cao9 = daolu2()
+    scene.add(cao9)
+    const cao10 = daolu3()
+    scene.add(cao10)
   }
 
   onBeforeUnmount(() => {
