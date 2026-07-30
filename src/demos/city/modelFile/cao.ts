@@ -119,17 +119,17 @@ export function caoModel() {
 
   function initCao(scene: THREE.Scene) {
     // 创建草
-    const cao1 = createCaoByPoint(-4.75, 0.001, 9.5, 8.5, 1, { topRight: true, r: 8 })
+    const cao1 = createCaoByPoint(-4.75, 0.01, 9.5, 8.5, 1, { topRight: true, r: 8 })
     scene.add(cao1)
-    const cao2 = createCaoByPoint(4.75, 0.001, 9.5, 8.5, 1, { topLeft: true, r: 8 })
+    const cao2 = createCaoByPoint(4.75, 0.01, 9.5, 8.5, 1, { topLeft: true, r: 8 })
     scene.add(cao2)
-    const cao3 = createCaoByPoint(-4.75, 0.001, 8.25, 8.5, 0.5, { bottomRight: true, r: 4 })
+    const cao3 = createCaoByPoint(-4.75, 0.01, 8.25, 8.5, 0.5, { bottomRight: true, r: 4 })
     scene.add(cao3)
-    const cao4 = createCaoByPoint(4.75, 0.001, 8.25, 8.5, 0.5, { bottomLeft: true, r: 4 })
+    const cao4 = createCaoByPoint(4.75, 0.01, 8.25, 8.5, 0.5, { bottomLeft: true, r: 4 })
     scene.add(cao4)
-    const cao5 = createCaoByPoint(-9.5, 0.001, 0, 1, 20, { r: 0 })
+    const cao5 = createCaoByPoint(-9.5, 0.01, 0, 1, 20, { r: 0 })
     scene.add(cao5)
-    const cao6 = createCaoByPoint(9.5, 0.001, 0, 1, 20, { r: 0 })
+    const cao6 = createCaoByPoint(9.5, 0.01, 0, 1, 20, { r: 0 })
     scene.add(cao6)
     const cao7 = createCaoByPoint(0, 0.01, -9.5, 18, 1, { r: 0 })
     scene.add(cao7)

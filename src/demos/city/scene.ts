@@ -1,6 +1,8 @@
 import * as THREE from 'three'
 import { boardModel } from './modelFile/board'
 import { caoModel } from './modelFile/cao'
+import { fanceBus } from './modelFile/fance'
+import { poolModel } from './modelFile/pool'
 
 interface SceneContext {
   scene: THREE.Scene
@@ -37,6 +39,12 @@ export function buildScene({ scene, camera, disposeTracker, addCallback }: Scene
 
   // 调用草模块
   caoModel().initCao(scene)
+
+  // 添加围栏
+  fanceBus().initFance(scene)
+
+  // 添加游泳池
+  poolModel(scene).initPool()
 
   // ---- 相机位置 ----
   camera.position.set(0, 0.5, 6)
